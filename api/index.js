@@ -48,7 +48,9 @@ router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
   try {
       bot.sendMessage(
             global_msg_id, //msg.id
-            `Pembacaan Sensor:: ${req.params.sensor1}, ${req.params.sensor2}, ${req.params.sensor3}`
+           `     Sensor Jarak:: ${req.params.sensor1} cm \n
+            Sensor Kelembapan:: ${req.params.sensor2} % \n
+            Sensor Suhu:: ${req.params.sensor3} °C`
      );
       res.json({
         "status": 202,
